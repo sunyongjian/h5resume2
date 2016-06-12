@@ -188,7 +188,33 @@ html{
         transform: rotate(12deg) translate3d(0, 0, 0);
     }
 }
+@keyframes pFadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: rotate(12deg) translate3d(-100%, 0, 0);
+        transform:rotate(12deg) translate3d(-100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: rotate(12deg) translate3d(0, 0, 0);
+        transform: rotate(12deg) translate3d(0, 0, 0);
+    }
+}
+
 @keyframes lineDown {
+    from {
+        opacity: 0;
+        -webkit-transform:rotate(38deg) translate3d(0, -100%, 0);
+        transform:rotate(38deg) translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform:rotate(38deg)  translate3d(0, 0, 0);
+        transform:rotate(38deg) translate3d(0, 0, 0);
+    }
+}
+@-webkit-keyframes lineDown {
     from {
         opacity: 0;
         -webkit-transform:rotate(38deg) translate3d(0, -100%, 0);
@@ -202,6 +228,7 @@ html{
 }
 
 /*usually keyframes start*/
+
 @-webkit-keyframes fadeInDown {
     from {
         opacity: 0;
@@ -214,7 +241,6 @@ html{
         transform: none;
     }
 }
-
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -241,6 +267,19 @@ html{
         transform: none;
     }
 }
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
 @-webkit-keyframes fadeInRight {
     from {
         opacity: 0;
@@ -267,6 +306,7 @@ html{
         transform: none;
     }
 }
+
 @-webkit-keyframes fadeInUp {
     from {
         opacity: 0;
@@ -293,6 +333,7 @@ html{
         transform: none;
     }
 }
+
 @-webkit-keyframes fadeIn {
     from {
         opacity: 0;
@@ -311,6 +352,7 @@ html{
         opacity: 1;
     }
 }
+
 
 @-webkit-keyframes bounceInLeft {
     from, 60%, 75%, 90%, to {
@@ -346,7 +388,6 @@ html{
         transform: none;
     }
 }
-
 @keyframes bounceInLeft {
     from, 60%, 75%, 90%, to {
         -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -382,6 +423,7 @@ html{
     }
 }
 
+
 @-webkit-keyframes bounceInRight {
     from, 60%, 75%, 90%, to {
         -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -416,7 +458,6 @@ html{
         transform: none;
     }
 }
-
 @keyframes bounceInRight {
     from, 60%, 75%, 90%, to {
         -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -488,7 +529,6 @@ html{
         transform:rotate(-12deg) translate3d(0, 0, 0);
     }
 }
-
 @keyframes pBounceInLeft {
     from, 60%, 75%, 90%, to {
         -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
