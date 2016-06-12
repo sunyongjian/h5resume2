@@ -1,16 +1,15 @@
+@charset "utf-8";
 *{
     margin: 0;
     padding: 0;
     -webkit-touch-callout: none;
-
-    /*--当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时,覆盖显示的高亮颜色--*/
     -webkit-tap-highlight-color: transparent;
 }
 
 html, body {
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 html {
     /*--设置的字体大小不会根据浏览器的改变而发生改变,只有写在HTML中才起到作用--*/
@@ -22,7 +21,6 @@ body {
     font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
     font-size: 12px;
     color: #424242;
-
     /*--禁止用户选中文字,但是不能给INPUT标签添加这个样式,否则在苹果手机中我们是无法输入内容的--*/
     -webkit-user-select: none;
 }
@@ -61,12 +59,16 @@ html{
     font-size: 100px;/* 设计稿 */
 }
 .swiper-container{
+    width: 100%;
     height: 100%;
 }
 .swiper-wrapper{
     height: 100%;
 }
-
+.swiper-slide {
+    position: relative;
+    height: 100%;
+}
 /*page1 start*/
 .pageFir{
     background: #fff;
@@ -846,21 +848,48 @@ html{
     }
 }
 
-@-webkit-keyframes rotateInDownLeft {
-    from {
-        -webkit-transform-origin: left bottom;
-        transform-origin: left bottom;
-        -webkit-transform: rotate3d(0, 0, 1, -45deg);
-        transform: rotate3d(0, 0, 1, -45deg);
+@-webkit-keyframes PBounceOutRight1{
+    from, 20%, 35%, 45%,50% {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
         opacity: 0;
+        -webkit-transform:rotate(-12deg) translate3d(-3000px, 0, 0);
+        transform:rotate(-12deg) translate3d(-3000px, 0, 0);
+    }
+    20% {
+        opacity: 1;
+        -webkit-transform:rotate(-12deg) translate3d(25px, 0, 0);
+        transform:rotate(-12deg) translate3d(25px, 0, 0);
+    }
+
+    35% {
+        -webkit-transform:rotate(-12deg) translate3d(-10px, 0, 0);
+        transform:rotate(-12deg) translate3d(-10px, 0, 0);
+    }
+
+    45% {
+        -webkit-transform:rotate(-12deg) translate3d(5px, 0, 0);
+        transform:rotate(-12deg) translate3d(5px, 0, 0);
+    }
+
+    50%{
+        opacity: 1;
+        -webkit-transform:rotate(-12deg) translate3d(0, 0, 0);
+        transform:rotate(-12deg) translate3d(0, 0, 0);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform:rotate(-12deg)  translate3d(0, 0, 0);
+        transform:rotate(-12deg)  translate3d(0, 0, 0);
     }
 
     to {
-        -webkit-transform-origin: left bottom;
-        transform-origin: left bottom;
-        -webkit-transform: none;
-        transform: none;
-        opacity: 1;
+        opacity: 0;
+        -webkit-transform:rotate(-12deg) translate3d(2000px, 0, 0);
+        transform:rotate(-12deg)  translate3d(2000px, 0, 0);
     }
 }
 
@@ -881,6 +910,25 @@ html{
         opacity: 1;
     }
 }
+@-webkit-keyframes rotateInDownLeft {
+    from {
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+        -webkit-transform: rotate3d(0, 0, 1, -45deg);
+        transform: rotate3d(0, 0, 1, -45deg);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform-origin: left bottom;
+        transform-origin: left bottom;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+
 
 @-webkit-keyframes rotateInUpLeft {
     from {
@@ -918,6 +966,24 @@ html{
     }
 }
 
+@keyframes rotateInDownRight {
+    from {
+        -webkit-transform-origin: right bottom;
+        transform-origin: right bottom;
+        -webkit-transform: rotate3d(0, 0, 1, 45deg);
+        transform: rotate3d(0, 0, 1, 45deg);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform-origin: right bottom;
+        transform-origin: right bottom;
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+
 @-webkit-keyframes rotateInDownRight {
     from {
         -webkit-transform-origin: right bottom;
@@ -936,23 +1002,6 @@ html{
     }
 }
 
-@keyframes rotateInDownRight {
-    from {
-        -webkit-transform-origin: right bottom;
-        transform-origin: right bottom;
-        -webkit-transform: rotate3d(0, 0, 1, 45deg);
-        transform: rotate3d(0, 0, 1, 45deg);
-        opacity: 0;
-    }
-
-    to {
-        -webkit-transform-origin: right bottom;
-        transform-origin: right bottom;
-        -webkit-transform: none;
-        transform: none;
-        opacity: 1;
-    }
-}
 @-webkit-keyframes zoomIn {
     from {
         opacity: 0;
@@ -961,6 +1010,9 @@ html{
     }
 
     50% {
+        opacity: 1;
+    }
+    to{
         opacity: 1;
     }
 }
@@ -1076,21 +1128,21 @@ html{
     width: 3rem;
     top: 1.5rem;
     left: 2.5rem;
-    font-size: .2rem;
+    font-size: .25rem;
 
 }
 .pageFour p:nth-of-type(6){
     width: 3rem;
-    top: 4.5rem;
+    top: 4.2rem;
     left: 2.5rem;
-    font-size: .2rem;
+    font-size: .25rem;
 
 }
 .pageFour p:nth-of-type(7){
     width: 3rem;
     top: 8rem;
     left: 2.5rem;
-    font-size: .2rem;
+    font-size: .25rem;
 
 }
 #page4 p:nth-of-type(5){
@@ -1315,6 +1367,29 @@ html{
     top: 3.4rem;
     left: 4.2rem;
 }
+.pageFive p:nth-of-type(6),.pageFive p:nth-of-type(7),.pageFive p:nth-of-type(8){
+  //  opacity: 1;
+    width: 1.5rem;
+    height: 3rem;
+    top: 6rem;
+    left: 4.6rem;
+    color: gold;
+    font-size: .23rem;
+    z-index: 3;
+    letter-spacing: normal;
+}
+.pageFive p:nth-of-type(7)
+{
+    top: 6.6rem;
+    left: 2.5rem;
+
+}
+.pageFive p:nth-of-type(8){
+
+    top: 7.2rem;
+    left: .5rem;
+}
+
 
 
 #page5 p:nth-of-type(1){
@@ -1350,6 +1425,19 @@ html{
 #page5 div:nth-of-type(3){
     animation:P5fadeInLeft 2s 0.5s both;
     -webkit-animation:P5fadeInLeft 2s 0.5s both;
+}
+
+#page5 p:nth-of-type(8){
+    animation:fadeInUp 2s 1.5s both;
+    -webkit-animation:fadeInUp 2s 1.5s both;
+}
+#page5 p:nth-of-type(7){
+    animation:fadeInUp 2s 1s both;
+    -webkit-animation:fadeInUp 2s 1s both;
+}
+#page5 p:nth-of-type(6){
+    animation:fadeInUp 2s 0.5s both;
+    -webkit-animation:fadeInUp 2s 0.5s both;
 }
 /*page5 end*/
 
