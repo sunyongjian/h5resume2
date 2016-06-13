@@ -584,25 +584,25 @@ html{
     position: absolute;
 }
 .pageSec img:nth-child(1){
-    left: 23%;
+    left: 1.48rem;
     width: 5rem;
     height: 100%;
 }
 .pageSec img:nth-child(2){
-    left: 34%;
+    left: 2.25rem;
     width: 1.64rem;
     height: 1.85rem;
     bottom: 21%;
 }
 .pageSec img:nth-child(3){
-    left: 14%;
+    left: 1rem;
     width: 1.60rem;
     height: 1.45rem;
     bottom: 23%;
 }
 .pageSec img:nth-child(4){
     top: 0;
-    left: 78%;
+    left: 5rem;
     width: 1.4rem;
     height: 2.36rem;
 }
