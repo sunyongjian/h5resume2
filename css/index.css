@@ -59,15 +59,26 @@ html{
     font-size: 100px;/* 设计稿 */
 }
 .swiper-container{
-    width: 100%;
-    height: 100%;
+   /* width: 100%;
+    height: 100%;*/
+
 }
 .swiper-wrapper{
     height: 100%;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
 }
 .swiper-slide {
     position: relative;
     height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    background-size: 100% auto;
+    overflow: hidden;
 }
 /*page1 start*/
 .pageFir{
@@ -1316,8 +1327,8 @@ html{
 }
 
 .pageFive p:nth-of-type(1){
-    top: 12%;
-    left: 34%;
+    top: 7%;
+    left: 32%;
     z-index: 1;
     width: 3rem;
     height: .9rem;
@@ -1331,8 +1342,8 @@ html{
     -webkit-transform: rotate(-12deg);
 }
 .pageFive p:nth-of-type(2){
-    top: 14%;
-    left: 40%;
+    top: 10%;
+    left: 38%;
     width: 3rem;
     height: .9rem;
     background: #9B7E00;
@@ -1343,21 +1354,21 @@ html{
     width: 5rem;
     height: .03rem;
     background: gold;
-    top: 25%;
+    top: 22%;
     left: 23%;
     transform: rotate(-12deg);
     -webkit-transform: rotate(-12deg);
 }
 .pageFive p:nth-of-type(4){
     width: 4.5rem;
-    top: 27%;
+    top: 23%;
     left: 42%;
 }
 .pageFive p:nth-of-type(5){
     width: 130%;
     height: .03rem;
     background: gold;
-    top: 5.75rem;
+    top: 5.2rem;
     left: -.3rem;
     transform: rotate(-20deg);
     -webkit-transform: rotate(-20deg);
@@ -1389,30 +1400,30 @@ html{
     left: 38%;
 }
 .pageFive div:nth-of-type(3) span{
-    top: 34%;
-    left: 39%;
+    top: .7rem;
+    left: .8rem;
 }
 .pageFive div img{
     width: 2rem;
     height: 2rem;
 }
 .pageFive div:nth-of-type(1){
-    top: 4.92rem;
+    top: 4.35rem;
 }
 .pageFive div:nth-of-type(2){
-    top: 4.2rem;
+    top: 3.65rem;
     left: 2rem;
 }
 .pageFive div:nth-of-type(3){
-    top: 3.4rem;
+    top: 2.83rem;
     left: 4.2rem;
 }
 .pageFive p:nth-of-type(6),.pageFive p:nth-of-type(7),.pageFive p:nth-of-type(8){
   //  opacity: 1;
     width: 1.5rem;
     height: 3rem;
-    top: 6rem;
-    left: 4.6rem;
+    top: 5.2rem;
+    left: 4.7rem;
     color: gold;
     font-size: .23rem;
     z-index: 3;
@@ -1420,14 +1431,13 @@ html{
 }
 .pageFive p:nth-of-type(7)
 {
-    top: 6.6rem;
-    left: 2.5rem;
+    top: 5.9rem;
+    left: 2.7rem;
 
 }
 .pageFive p:nth-of-type(8){
-
-    top: 7.2rem;
-    left: .5rem;
+    top: 6.4rem;
+    left: .7rem;
 }
 
 
